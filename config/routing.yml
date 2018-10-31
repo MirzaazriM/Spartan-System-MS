@@ -1,0 +1,42 @@
+# home
+root:
+    path: /
+    defaults:
+        resource: "landing"
+    methods: [GET, POST]
+    
+system:
+    path: /{resource}{slash}
+    requirements:
+        resource: "system"
+        slash: "[/]{0,1}"
+    methods: [GET, POST, PUT, DELETE]
+
+language:
+    path: /{resource}{slash}
+    requirements:
+        resource: "language"
+        slash: "[/]{0,1}"
+    methods: [GET, POST, PUT, DELETE]
+
+migration:
+    path: /{resource}{slash}
+    requirements:
+        resource: "migration"
+        slash: "[/]{0,1}"
+    methods: [GET, POST, PUT, DELETE]
+
+upload:
+    path: /{resource}{slash}
+    requirements:
+        resource: "upload"
+        slash: "[/]{0,1}"
+    methods: [GET, POST, PUT, DELETE]
+
+download:
+    path: /{resource}{slash}
+    requirements:
+        resource: "download"
+        slash: "[/]{0,1}"
+    methods: [GET, POST, PUT, DELETE]
+

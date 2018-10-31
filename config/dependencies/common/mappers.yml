@@ -1,0 +1,32 @@
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+
+    Model\Mapper\SystemMapper:
+        factory: Component\MapperFactory:create
+        arguments:
+            - 'Model\Mapper\SystemMapper'
+
+    Model\Mapper\LanguageMapper:
+        factory: Component\MapperFactory:create
+        arguments:
+            - 'Model\Mapper\LanguageMapper'
+
+    Model\Mapper\MigrationMapper:
+        factory: Component\MapperFactory:create
+        arguments:
+            - 'Model\Mapper\MigrationMapper'
+
+    Model\Mapper\UploadMapper:
+        factory: Component\MapperFactory:create
+        arguments:
+            - 'Model\Mapper\UploadMapper'
+
+    Model\Mapper\DownloadMapper:
+        factory: Component\MapperFactory:create
+        arguments:
+            - 'Model\Mapper\DownloadMapper'

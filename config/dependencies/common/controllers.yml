@@ -1,0 +1,27 @@
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+        
+    Application\Controller\:
+        resource: '../../../src/Application/Controller/*'
+        
+    controller.landing:
+        alias: 'Application\Controller\Landing'
+        
+    controller.system:
+        alias: 'Application\Controller\SystemController'
+
+    controller.language:
+        alias: 'Application\Controller\LanguageController'
+
+    controller.migration:
+        alias: 'Application\Controller\MigrationController'
+
+    controller.upload:
+        alias: 'Application\Controller\UploadController'
+
+    controller.download:
+        alias: 'Application\Controller\DownloadController'
